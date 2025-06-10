@@ -86,18 +86,17 @@ public class MainActivity extends AppCompatActivity {
         String userType = prefs.getString("user_type", "Física"); // Default: candidato
         boolean isEmpresa = userType.equalsIgnoreCase("Jurídica");
 
-        navigationView = findViewById(R.id.navigation_view);
-
         // Filtra itens do menu de acordo com o tipo de usuário
-        if (navigationView != null) {
+        if (idNavView != null) {
             if (isEmpresa) {
-                // Empresa: esconde itens que só fazem sentido para candidatos
-                navigationView.getMenu().findItem(R.id.idCriarVagasItemMenu).setVisible(false);
-                navigationView.getMenu().findItem(R.id.idLoginItemMenu).setVisible(false);
+                // Empresa: mostra opções de empresa, esconde as de candidato
+                idNavView.getMenu().findItem(R.id.idVagasItemMenu).setVisible(false);
+                idNavView.getMenu().findItem(R.id.idLoginItemMenu).setVisible(false);
             } else {
-                // Candidato: esconde itens que só fazem sentido para empresas
-                navigationView.getMenu().findItem(R.id.idCriarVagasItemMenu).setVisible(false);
-                navigationView.getMenu().findItem(R.id.idLoginItemMenu).setVisible(false);
+                // Candidato: mostra opções de candidato, esconde as de empresa
+                idNavView.getMenu().findItem(R.id.idCriarVagasItemMenu).setVisible(false);
+                idNavView.getMenu().findItem(R.id.idLoginItemMenu).setVisible(false);
+                // Outras opções específicas de empresa, caso existam, devem ser escondidas aqui também
             }
         }
     }

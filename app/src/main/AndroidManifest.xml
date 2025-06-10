@@ -4,9 +4,9 @@
     <!-- Permissões -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
-
 
     <application
         android:allowBackup="true"
@@ -19,152 +19,129 @@
         android:theme="@style/Theme.CardStackView"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-
-
-    <!-- Activities com tema consistente -->
+        <activity
+            android:name=".MainCandidatoActivity"
+            android:exported="false" />
+        <!-- Activities com tema consistente -->
         <activity
             android:name=".SplashActivity"
             android:exported="true"
             android:theme="@style/Theme.CardStackView">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".LoginActivity"
+            android:clearTaskOnLaunch="true"
             android:launchMode="singleTask"
-            android:noHistory="true"
-            android:clearTaskOnLaunch="true"/>
-
+            android:noHistory="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:launchMode="singleTop"
-            android:theme="@style/Theme.CardStackView"/>
-
+            android:theme="@style/Theme.CardStackView" />
         <activity
             android:name=".CandidatarSeActivity"
             android:exported="false"
-            android:theme="@style/Theme.CardStackView"/>
-
+            android:theme="@style/Theme.CardStackView" />
         <activity
             android:name=".CandidatosActivity"
             android:exported="false"
-            android:theme="@style/Theme.CardStackView"/>
-
+            android:theme="@style/Theme.CardStackView" />
         <activity
             android:name=".FavoritosActivity"
             android:exported="false"
-            android:theme="@style/Theme.CardStackView"/>
-
+            android:theme="@style/Theme.CardStackView" />
         <activity
             android:name=".DialogAdicionarFormacaoActivity"
             android:exported="false"
-            android:theme="@style/Theme.CardStackView"/>
-
+            android:theme="@style/Theme.CardStackView" />
         <activity
             android:name=".DialogAdicionarExperienciaActivity"
             android:exported="false"
-            android:theme="@style/Theme.CardStackView"/>
-
+            android:theme="@style/Theme.CardStackView" />
         <activity
             android:name=".DialogAdicionarCertificadoActivity"
             android:exported="false"
-            android:theme="@style/Theme.CardStackView"/>
-
+            android:theme="@style/Theme.CardStackView" />
         <activity
             android:name=".SelecaoActivity"
             android:exported="true"
             android:launchMode="singleTop"
-            android:theme="@style/Theme.CardStackView"/>
-
+            android:theme="@style/Theme.CardStackView" />
         <activity
             android:name=".CriarVagaActivity"
             android:exported="false"
             android:launchMode="singleTop"
-            android:windowSoftInputMode="adjustResize"
-            android:theme="@style/Theme.CardStackView"/>
-
+            android:theme="@style/Theme.CardStackView"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".VagaPreVisualizacaoActivity"
             android:exported="false"
             android:launchMode="singleTop"
-            android:theme="@style/Theme.CardStackView"/>
-
+            android:theme="@style/Theme.CardStackView" />
         <activity
             android:name=".DetalheVagaActivity"
             android:exported="false"
             android:launchMode="singleTop"
-            android:theme="@style/Theme.CardStackView"/>
-
+            android:theme="@style/Theme.CardStackView" />
         <activity
             android:name=".LoginPessoaFisica"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"
-            android:theme="@style/Theme.CardStackView"/>
-
+            android:theme="@style/Theme.CardStackView"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".LoginPessoaJuridica"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"
-            android:theme="@style/Theme.CardStackView"/>
-
+            android:theme="@style/Theme.CardStackView"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".PerfilActivity"
             android:exported="false"
-            android:theme="@style/Theme.CardStackView"/>
-
-
+            android:theme="@style/Theme.CardStackView" />
         <activity
             android:name=".EdicaoPerfilPessoaActivity"
             android:exported="true"
-            android:theme="@style/Theme.CardStackView"/>
-
+            android:theme="@style/Theme.CardStackView" />
         <activity
             android:name=".EdicaoPerfilEmpresaActivity"
             android:exported="false"
-            android:theme="@style/Theme.CardStackView"/>
-
+            android:theme="@style/Theme.CardStackView" />
         <activity
             android:name=".TelaEmpresaActivity"
             android:exported="true"
-            android:theme="@style/Theme.CardStackView"/>
-
+            android:theme="@style/Theme.CardStackView" />
         <activity
             android:name=".SobreNosActivity"
             android:exported="false"
-            android:theme="@style/Theme.CardStackView"/>
-
+            android:theme="@style/Theme.CardStackView" />
         <activity
             android:name=".ConfigActivity"
             android:exported="false"
-            android:theme="@style/Theme.CardStackView"/>
-
+            android:theme="@style/Theme.CardStackView" />
         <activity
             android:name=".CadPJuridicaActivity"
             android:exported="false"
-            android:theme="@style/Theme.CardStackView"/>
-
+            android:theme="@style/Theme.CardStackView" />
         <activity
             android:name=".RecSenhaActivity"
             android:exported="false"
-            android:theme="@style/Theme.CardStackView"/>
-
+            android:theme="@style/Theme.CardStackView" />
         <activity
             android:name=".DrawerActivity"
             android:exported="false"
-            android:theme="@style/Theme.CardStackView"/>
-
+            android:theme="@style/Theme.CardStackView" />
         <activity
             android:name=".CadastroActivity"
             android:exported="false"
-            android:theme="@style/Theme.CardStackView"/>
-
+            android:theme="@style/Theme.CardStackView" />
         <activity
             android:name=".FeedbackActivity"
             android:exported="false"
-            android:theme="@style/Theme.CardStackView"/>
+            android:theme="@style/Theme.CardStackView" />
     </application>
+
 </manifest>
